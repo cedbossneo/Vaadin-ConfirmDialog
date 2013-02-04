@@ -4,6 +4,7 @@ import java.text.NumberFormat;
 import java.util.Locale;
 
 import com.vaadin.server.Sizeable;
+import com.vaadin.shared.ui.MarginInfo;
 import org.vaadin.dialogs.ConfirmDialog.Factory;
 
 import com.vaadin.event.ShortcutAction.KeyCode;
@@ -93,6 +94,7 @@ public class DefaultConfirmDialogFactory implements Factory {
         HorizontalLayout buttons = new HorizontalLayout();
         c.addComponent(buttons);
         buttons.setSpacing(true);
+        buttons.setMargin(new MarginInfo(false, true, false, true));
 
         buttons.setHeight(format(BUTTON_HEIGHT) + "em");
         buttons.setWidth(100, Sizeable.Unit.PERCENTAGE);
@@ -192,7 +194,7 @@ public class DefaultConfirmDialogFactory implements Factory {
 
         // Based on Reindeer style:
         double btnHeight = 2.5d;
-        double vmargin = 8d;
+        double vmargin = 9d;
         double hmargin = 2d;
 
         double[] res = new double[] { width + hmargin,
